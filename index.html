@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Passions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+        <h1><strong>My Passions</strong></h1>
+        <ul>
+          <a href="#" target="_blank">Home</a>|
+          <a href="auto.html" target="_blank">Auto</a>|
+          <a href="fotografia.html" target="_blank">Fotografia</a>|
+          <a href="tecnologia.html" target="_blank">Tecnologia</a>
+        </ul>
+    </header>
+    <hr>
+    <main>
+      <!-- carosello -->
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="tecnologia.html" target="_blank">
+              <img src="img/code.jpg" alt="Immagine 1" id="tech">
+            </a>
+            <div class="carousel-caption">
+              <h3>Tecnologia</h3>
+              <p>Quella che coltivo da più tempo</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <a href="fotografia.html" target="_blank">
+              <img src="img/DSC01414.webp" alt="Immagine 2" id="photo">
+            </a>
+            <div class="carousel-caption">
+              <h3>Fotografia</h3>
+              <p>nata da poco, ma mi sta rapendo!</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <a href="auto.html" target="_blank">
+              <img src="img/DSC01172.webp" alt="Immagine 3" id="car">
+            </a>
+            <div class="carousel-caption">
+               <h3>Auto</h3>
+              <p>forse la mia passione più grande</p>
+            </div>
+        </div>
+      </div>
+        <button class="carousel-control prev" id="prevSlide">&#10094;</button>
+        <button class="carousel-control next" id="nextSlide">&#10095;</button>
+      </div>
+      <hr>
+      <!-- CARD -->
+      <h2>Esplora le mie passioni cliccando sulle immagini, oppure i miei progetti qua sotto!</h2>
+      <section class="articles">
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="img/code.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Weather-webapp</h2>
+              <p>
+                Questa web-app è stata realizzata durante il corso front-end di Musa formazione. Per la sua creazione abbiamo usato React e altre librerie, il suo funzionamento è molto semplice alla fine, però è stata molto utile per comprendere meglio come creare un progett con React.
+              </p>
+              <a href="https://weather-webapp-mk6b78r2y-nicco-88s-projects.vercel.app" target="_blank" class="read-more">
+                Vai al sito <span class="sr-only">about this is some title</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="img/code.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Sito ristornate</h2>
+              <p>
+                Questo sito è stata realizzato durante il corso front-end di Musa formazione. Abbiamo usato la libreria Boostrap per realizzarlo, è stata la prima libreria usata, ed è davvero comoda anche se utilizzandolo spesso si rischia di creare siti web identici praticamente, è ancora in fase di rifinitura, ma la struttra è completa.
+              </p>
+              <a href="https://restaurant-cveukeyv7-nicco-88s-projects.vercel.app" target="_blank" class="read-more">
+                Vai al sito <span class="sr-only">about this is some title</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="img/code.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Meme generetor</h2>
+              <p>
+                Questo sito è stata realizzato durante il corso front-end di Musa formazione. Questa simpatica web-app, l'abbiamo realizzata mentre affrontavamo l'argomento Canvas, oltre ad essere stata molto piacevole da realizzare, ho potuto capire quanto codice ci possa essere dietro a web-app semplici.
+              </p>
+              <a href="https://meme-generator-ravdfxhvl-nicco-88s-projects.vercel.app" target="_blank" class="read-more">
+                Vai al sito <span class="sr-only">about this is some title</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="img/code.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Store-Locator</h2>
+              <p>
+                Questo sito è stata realizzato durante il corso front-end di Musa formazione. Questa web-app l' abbiamo creata con JS, utilizzando un approccio a moduli, è stato interessante vedere come un linguaggio di programmazione si possa usare in diversi modi.
+              </p>
+              <a href="https://store-locator-18iloz9se-nicco-88s-projects.vercel.app" target="_blank" class="read-more">
+                Vai al sito <span class="sr-only">about this is some title</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
