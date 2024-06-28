@@ -1,0 +1,53 @@
+html, body{
+    height: 100vh;
+    margin: 0;
+}
+
+body{
+    display: grid;
+    /* creiamo delle aree iniziando a darle dei nomi per richiamarle */
+    grid-template-areas: "header" "sidebar" "contenuto" "footer";
+    grid-template-rows: 50px auto 1fr auto;
+}
+
+header, footer{
+    background-color: lightgreen;
+}
+
+aside{
+    background-color: lightseagreen;
+    /* indico il nome dell' area */
+    grid-area: sidebar;
+}
+
+header{
+    grid-area: header;
+}
+
+footer{
+    grid-area: footer;
+}
+
+main{
+    background-color: salmon;
+    grid-area: contenuto;
+}
+
+
+@media (min-width: 768px) {
+
+    body {
+        /* scrivo a parole come deve essere strutturato il body, il layout è 
+        a due colonne con 3 righe, indico alla header che deve occupare le 2 colonne
+        header header, mentre la sidebar occupa la colonna da 1fr e il contenuto
+        quella da 2fr, e il footer si comporta come la header,
+        tutto questo sopra la largheza minima di 768px */
+        grid-template-areas: 
+        "header header" 
+        "sidebar contenuto" 
+        "footer footer"
+        ;
+        grid-template-rows: 50px 1fr auto;
+        grid-template-columns: 1fr 2fr;
+    }
+}

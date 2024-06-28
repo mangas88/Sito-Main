@@ -1,0 +1,38 @@
+:root, body{
+    height: 100vh;
+    margin: 0;
+}
+
+
+body > section {
+    background-color: lightsalmon;
+    display: grid;
+    /* con AUTO-FIT creiamo tante colonne quante ne sono necessarie per contenere,
+    le immagini in arrivo, praticamente aggiunge di fianco una card ogni colta che puo
+    inoltre cosi facendo otteniamo un layout-responsive.
+    MINMAX vuole due valori uno minimo e uno massimo, e sto dicendo che la card deve
+    essere minimo di larghezza tot. px, mentre per l'altra unita indica fino a quanto
+    pio espandersi la card prima che se ne affianchi un altra!!! */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+/* creiamo le card */
+
+article{
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+article header{
+    height: 250px;
+    overflow: hidden;
+}
+
+article header img {
+    object-fit: cover;
+    min-height: 200px;
+    max-width: 100%;
+}
