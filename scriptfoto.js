@@ -1,37 +1,5 @@
-/* modali fotografia.html */
-
-// Ottieni l'elemento modale
-let modal = document.getElementById("myModal");
-
-// Ottieni l'elemento dell'immagine modale e la didascalia
-let modalImg = document.getElementById("img01");
-let captionText = document.getElementById("caption");
-let modalText = document.getElementById("modalText");
-
-// Aggiungo un event listener a tutte le immagini con la classe "modal-image"
-let images = document.getElementsByClassName("modal-image");
-/* devo creare un ciclo for per applicare la modale ad ogni immagine */
-for (let i = 0; i < images.length; i++) {
-    images[i].addEventListener("click", function() {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
-        modalText.textContent = this.getAttribute("data-text");
-    });
-}
-
-// Ottiengo l'elemento <span> che chiude la finestra modale
-let span = document.getElementsByClassName("close")[0];
-
-// Quando l'utente clicca su <span> (x), chiudi la finestra modale
-span.addEventListener("click", function() {
-    modal.style.display = "none";
-});
-
-
-// Aggiungo un event listener per chiudere la finestra modale cliccando al di fuori di essa
-window.addEventListener("click", function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-});
+const galleryImages=[{src:"./img-foto/1.jpeg",alt:"",description:"ISO:10000 f/5.6 Esposizione: 1/800 Focale: 70mm"},{src:"./img-foto/2.jpeg",alt:"",description:"ISO:100 f/11 Esposizione: 1/250 Focale: 28mm"},{src:"./img-foto/3.jpeg",alt:"",description:"ISO:100 f/11 Esposizione: 1/160 Focale: 39mm"},{src:"./img-foto/4.jpeg",alt:"",description:"ISO:10000 f/20 Esposizione: 1/320 Focale: 33mm"},{src:"./img-foto/5.jpeg",alt:"",description:"ISO:3200 f/5 Esposizione: 1/160 Focale: 60mm"},{src:"./img-foto/6.jpeg",alt:"",description:"ISO:1000 f/22 Esposizione: 1/3200 Focale: 52mm"},{src:"./img-foto/7.jpeg",alt:"",description:"ISO:100 f/9 Esposizione: 1/400 Focale: 70mm"},{src:"./img-foto/8.jpeg",alt:"",description:"ISO:100 f/7.1 Esposizione: 1/100 Focale: 55mm"},{src:"./img-foto/9.jpeg",alt:"",description:"ISO:10000 f/6.3 Esposizione: 1/2500 Focale: 70mm"},{src:"./img-foto/10.jpeg",alt:"",description:"ISO:500 f/10 Esposizione: 1/60 Focale: 41mm"},{src:"./img-foto/11.jpeg",alt:"",description:"ISO:3200 f/4.5 Esposizione: 1/60 Focale: 47mm"},{src:"./img-foto/12.jpeg",alt:"",description:"ISO:6400 f/5 Esposizione: 1/30 Focale: 53mm"},{src:"./img-foto/13.jpeg",alt:"",description:"ISO:1600 f/3.5 Esposizione: 1/160 Focale: 28mm"},{src:"./img-foto/14.jpeg",alt:"",description:"ISO:3200 f/4 Esposizione: 1/160 Focale: 32mm"},]
+const imageElements=galleryImages.map(path=>{const wrapper=document.createElement('div');wrapper.className='image-wrapper';const img=document.createElement('img');img.className='modal-image';img.src=path.src;img.alt=path.alt;wrapper.appendChild(img);return img,wrapper})
+const galleryContainerz=document.getElementById("gallery-container");imageElements.forEach(img=>galleryContainerz.appendChild(img))
+let modal=document.getElementById("myModal");let modalImg=document.getElementById("img1");let captionText=document.getElementById("caption");let modalText=document.getElementById("modalText");let images=document.getElementsByClassName("modal-image");for(let i=0;i<images.length;i++){images[i].addEventListener("click",function(){modal.style.display="block";modalImg.src=this.src;captionText.innerHTML=this.alt;modalText.textContent=galleryImages[i].description})}
+let span=document.getElementsByClassName("close")[0];span.addEventListener("click",function(){modal.style.display="none"});window.addEventListener("click",function(event){if(event.target==modal){modal.style.display="none"}})
